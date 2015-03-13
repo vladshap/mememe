@@ -4,8 +4,6 @@
 	"sources": [
 		"../../site-styles.scss",
 		"../../components/_extenders.scss",
-		"../../core/_sprites.scss",
-		"../../core/_sprites@2x.scss",
 		"../../core/_mixins.scss",
 		"../../core/_functions.scss",
 		"../../components/_forms.scss",
@@ -15,6 +13,6 @@
 		"../../core/_variables.scss"
 	],
 	"sourcesContent": [],
-	"mappings": "ACCiB,AAAS;EAClB,AAAO;EACP,AAAS;EACT,AAAS;EACT,AAAQ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AOLhB;EACI,AAAQ;EJ4BR,AAA+B;EDcjC,AAAO;EAIP,AAAQ;ECbF;IIlCR;MJmCY,AAAiC;MACjC,AAAmC",
+	"mappings": "ACCiB,AAAS;EAClB,AAAO;EACP,AAAS;EACT,AAAS;EACT,AAAQ",
 	"names": []
 }
