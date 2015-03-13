@@ -1,0 +1,63 @@
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: table;
+    height: 0;
+}
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+.icn-arrow {
+    background: url('images/icons.png?=1419285614062') 0px 0px no-repeat;
+    width: 29px;
+    height: 67px;
+}
+
+@media only screen and (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+    .icn-arrow {
+        background: url('images/icons@2x.png?=1419285614062') 0px 0px no-repeat;
+        background-size: 58px 67px;
+    }
+}
+
+/*# sourceMappingURL=site-styles.css.map */
