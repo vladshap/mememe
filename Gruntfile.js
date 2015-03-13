@@ -52,6 +52,19 @@ module.exports = function (grunt) {
             },
             dist: { src: 'content/styles/*.css' }
         },
+        browserSync: {
+            bsFiles: {
+                src : ['content/styles/*.css', '*.html']
+            },
+            options: {
+                watchTask: true
+            },
+            options: {
+                server: {
+                    baseDir: "./"
+                }
+            }
+        },
         watch: {
             options: {
                 spawn: false
@@ -74,6 +87,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-folder-list');
-    grunt.registerTask('default', ['sprite:all', 'sprite:sprite_2x', 'sass', 'folder_list']);
+    grunt.registerTask('default', ['sprite:all', 'sprite:sprite_2x', 'sass', 'folder_list', 'browserSync']);
 };

@@ -15,6 +15,7 @@
     "grunt-folder-list": "*"
   },
   "devDependencies": {
+    "grunt-browser-sync": "^2.0.0",
     "grunt-postcss": "^0.3.0"
   },
   "scripts": {
