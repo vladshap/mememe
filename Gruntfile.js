@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
 
     var timestamp = Date.now();
+    var autoprefixer = require('autoprefixer-core');
     grunt.initConfig({
         sass: {
             options: {
@@ -43,6 +44,14 @@ module.exports = function (grunt) {
                 dest: 'styleguide/scripts/snippets.txt'
             }
         },
+        postcss: {
+            options: {
+                processors: [
+                    autoprefixer({ browsers: ['last 2 version'] }).postcss
+                ]
+            },
+            dist: { src: 'content/styles/*.css' }
+        },
         watch: {
             options: {
                 spawn: false
@@ -53,7 +62,7 @@ module.exports = function (grunt) {
             },
             css: {
                 files: 'scss/**/*.scss',
-                tasks: ['sass:dist']
+                tasks: ['sass:dist', 'postcss:dist']
             },
             styleguide: {
                 files: ['styleguide/snippets/*'],
@@ -64,6 +73,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-spritesmith');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-folder-list');
     grunt.registerTask('default', ['sprite:all', 'sprite:sprite_2x', 'sass', 'folder_list']);
 };
