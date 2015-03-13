@@ -55,3 +55,6 @@ The provided mixins are intended to be used with the array-like variables
   @include sprite-width($sprite);
   @include sprite-height($sprite);
 }
+
+
+@import "sprites@2x";

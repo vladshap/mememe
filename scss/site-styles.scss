@@ -1,10 +1,17 @@
+
+$visual-grid: true;
+$visual-grid-opacity: 1;
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+
 //Extenders
 @import "components/extenders";
 
 //Core files
 @import
 //    "core/_sprites",
-//    "core/_sprites@2x",
     "core/mixins",
     "core/functions";
 
